@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+  font-family: "Mandali", sans-serif;
+  color: #fff;
+}
+body {
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@keyframes heartfade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.heart {
+  z-index: 999;
+  animation: heartfade 6s linear;
+  position: absolute;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #fc2a62;
+  position: absolute;
+  height: 30px;
+  width: 45px;
+  border-radius: 15px 0px 0px 15px;
+}
+.heart:before {
+  transform: rotate(45deg);
+}
+
+.heart:after {
+  left: 10.5px;
+  transform: rotate(135deg);
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Aligner-item {
+  max-width: 50%;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
