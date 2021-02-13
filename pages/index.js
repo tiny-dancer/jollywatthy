@@ -202,8 +202,8 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card} onClick={restart}>
+            <h3>You are</h3>
             <h3>
-              You are{" "}
               <TextTransition
                 text={
                   index < texts.length - 1 * 2
