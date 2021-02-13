@@ -2,11 +2,13 @@ import Head from "next/head";
 import React, { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import TextTransition, { presets } from "react-text-transition";
+import { FaRedoAlt } from "react-icons/fa";
 
 const randomNumber = () => Math.floor(Math.random() * 9999999999 + 100000);
 
 export default function Home() {
   const [index, setIndex] = React.useState(0);
+  const [restarts, setRestarts] = React.useState(0);
 
   // var texts = [
   //   "Dine",
@@ -156,6 +158,15 @@ export default function Home() {
     }
   }, []);
 
+  var restart = () => {
+    setIndex(0);
+    setRestarts(restarts + 1);
+
+    if (restarts + 1 == 2) {
+      alert("I like you too :)");
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -190,18 +201,19 @@ export default function Home() {
         </p> */}
 
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <h3>You are</h3>
+          <div className={styles.card} onClick={restart}>
             <h3>
+              You are{" "}
               <TextTransition
                 text={
-                  index < 50
+                  index < texts.length - 1 * 2
                     ? texts[index % texts.length]
                     : texts[texts.length - 1]
                 }
                 springConfig={presets.gentle}
               />
             </h3>
+            {index > texts.length - 1 * 2 ? <FaRedoAlt /> : <span> </span>}
           </div>
           {/* <TextTransition
               text={texts[state.textFastIndex % texts.length]}
