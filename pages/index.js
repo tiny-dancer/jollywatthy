@@ -162,7 +162,7 @@ export default function Home() {
     setIndex(0);
     setRestarts(restarts + 1);
 
-    if (restarts + 1 >= 2) {
+    if (restarts + 1 == 2) {
       alert("I like you too :)");
     }
   };
