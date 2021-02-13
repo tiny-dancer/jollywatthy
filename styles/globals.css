@@ -14,7 +14,7 @@ body {
   background-size: cover;
   background-attachment: scroll;
   margin: auto;
-  max-width: 900px;
+  max-width: 1100px;
 }
 @keyframes heartfade {
   0% {
