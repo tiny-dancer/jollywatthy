@@ -12,6 +12,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: auto;
+  max-width: 900px;
 }
 @keyframes heartfade {
   0% {

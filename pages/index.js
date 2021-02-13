@@ -202,8 +202,8 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card} onClick={restart}>
-            <h3>You are</h3>
             <h3>
+              You are{" "}
               <TextTransition
                 text={
                   index < texts.length - 1 * 2
@@ -213,7 +213,7 @@ export default function Home() {
                 springConfig={presets.gentle}
               />
             </h3>
-            {index > texts.length - 1 * 2 ? <FaRedoAlt /> : null}
+            {index > texts.length - 1 * 2 ? <FaRedoAlt /> : <span> </span>}
           </div>
           {/* <TextTransition
               text={texts[state.textFastIndex % texts.length]}
