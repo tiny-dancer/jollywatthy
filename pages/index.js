@@ -199,7 +199,7 @@ export default function Home() {
           Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p> */}
-
+        <div className={styles.card}></div>
         <div className={styles.grid}>
           <div className={styles.card} onClick={restart}>
             <h3>You are</h3>
@@ -222,7 +222,6 @@ export default function Home() {
               inline
               overflow
             /> */}
-
           <div className={styles.card}>
             <h3>Your valentine,</h3>
             <h4>Thor's handsome nerdy cousin, Your Watthem.</h4>
@@ -231,9 +230,8 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>
-          But for realz you're like totally cool and hopefully you like this.
-        </p>
+        <p>&#9829; 1 Valentine's Day and Counting &#9829;</p>
+
         {/* Made with <span style="color: #e25555;">&#9829;</span> in Switzerland */}
       </footer>
     </div>
